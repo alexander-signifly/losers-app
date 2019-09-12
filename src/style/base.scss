@@ -1,0 +1,16 @@
+body {
+	background-color: $black;
+	color: $white;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	cursor: pointer;
+}
+
+* {
+	box-sizing: border-box;
+}

@@ -1,11 +1,16 @@
 <template>
 	<div class="app">
 		<router-view />
+		<tabs />
 	</div>
 </template>
 
 <script>
-export default {};
+import tabs from "@/components/tabs";
+
+export default {
+	components: {tabs}
+};
 </script>
 
 <style lang="scss" scoped>

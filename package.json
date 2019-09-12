@@ -7,9 +7,6 @@
 		"inspect": "vue-cli-service inspect",
 		"lint": "vue-cli-service lint"
 	},
-	"eslintConfig": {
-		"extends": "./node_modules/@signifly/config/eslint.vue.js"
-	},
 	"dependencies": {
 		"normalize.css": "8.0.1",
 		"vue": "2.6.10",
