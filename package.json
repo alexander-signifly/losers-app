@@ -1,0 +1,29 @@
+{
+	"name": "losers",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "vue-cli-service serve --port 3000",
+		"build": "vue-cli-service build --modern",
+		"inspect": "vue-cli-service inspect",
+		"lint": "vue-cli-service lint"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/@signifly/config/eslint.vue.js"
+	},
+	"dependencies": {
+		"normalize.css": "8.0.1",
+		"vue": "2.6.10",
+		"vue-router": "3.0.6"
+	},
+	"devDependencies": {
+		"@signifly/config": "latest",
+		"@vue/cli-plugin-babel": "3.7.0",
+		"@vue/cli-plugin-eslint": "3.7.0",
+		"@vue/cli-service": "3.7.0",
+		"babel-plugin-lodash": "3.3.4",
+		"sass": "1.19.0",
+		"sass-loader": "7.1.0",
+		"svg-inline-loader": "0.8.0",
+		"vue-template-compiler": "2.6.10"
+	}
+}
