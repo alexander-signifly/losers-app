@@ -15,24 +15,24 @@ export default {
   data: () => ({
     tabs: [
       {
-        name: "1",
-        path: "/path1"
+        name: "home",
+        path: "/"
       },
       {
-        name: "2",
-        path: "/path2"
+        name: "seasons",
+        path: "/seasons"
       },
       {
-        name: "3",
-        path: "/path3"
+        name: "play",
+        path: "/play"
       },
       {
-        name: "4",
-        path: "/path4"
+        name: "badges",
+        path: "/badges"
       },
       {
-        name: "5",
-        path: "/path5"
+        name: "players",
+        path: "/players"
       }
     ]
   })
