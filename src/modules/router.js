@@ -12,8 +12,8 @@ export default new Router({
 	mode: "history",
 	base: process.env.BASE_URL,
 	routes: [
-		{path: "/", name: "index", component: home},
-		{path: "/seasons", name: "seasons", component: seasons},
+		{path: "/", name: "losers", component: home},
+		{path: "/seasons", name: "Seasons", component: seasons},
 		{path: "/play", name: "play", component: play},
 		{path: "/badges", name: "badges", component: badges},
 		{path: "/players", name: "players", component: players}

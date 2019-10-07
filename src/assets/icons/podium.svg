@@ -1,0 +1,11 @@
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Atoms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icons" transform="translate(-763.000000, -210.000000)" stroke="#FFFFFF">
+            <g id="Icon/Podium" transform="translate(760.000000, 206.000000)">
+                <path d="M5,10 L9,10 L9,10 L9,19 L5,19 C4.44771525,19 4,18.5522847 4,18 L4,11 C4,10.4477153 4.44771525,10 5,10 Z" id="Podium3"></path>
+                <path d="M10,5 L14,5 C14.5522847,5 15,5.44771525 15,6 L15,19 L15,19 L9,19 L9,6 C9,5.44771525 9.44771525,5 10,5 Z" id="Podium2"></path>
+                <path d="M15,13 L19,13 C19.5522847,13 20,13.4477153 20,14 L20,18 C20,18.5522847 19.5522847,19 19,19 L15,19 L15,19 L15,13 Z" id="Podium1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

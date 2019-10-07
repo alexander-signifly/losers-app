@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icons/Home</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icons" transform="translate(-483.000000, -209.000000)" stroke="#FFFFFF">
+            <g id="Icon/Home" transform="translate(480.000000, 206.000000)">
+                <path d="M8.1557,16.6363 L15.8307,16.6363" id="Home2"></path>
+                <path d="M5.7748,7.3443 L9.7468,4.6853 C11.1098,3.7723 12.8898,3.7723 14.2538,4.6853 L18.2248,7.3443 C19.3348,8.0863 20.0008,9.3333 20.0008,10.6673 L20.0008,16.9993 C20.0008,18.6573 18.6568,19.9993 17.0008,19.9993 L7.0008,19.9993 C5.3428,19.9993 4.0008,18.6573 4.0008,16.9993 L4.0008,10.6673 C4.0008,9.3333 4.6658,8.0863 5.7748,7.3443 Z" id="Home1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

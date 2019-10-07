@@ -1,5 +1,5 @@
 <template>
-  <div>SEASONS</div>
+	<div>SEASONS</div>
 </template>
 
 <script>
