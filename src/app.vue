@@ -2,16 +2,16 @@
 	<div class="app">
 		<v-header />
 		<router-view />
-		<tabs />
+		<v-nav />
 	</div>
 </template>
 
 <script>
 import vHeader from "@/components/header";
-import tabs from "@/components/tabs";
+import vNav from "@/components/nav";
 
 export default {
-	components: {vHeader, tabs}
+	components: {vHeader, vNav}
 };
 </script>
 

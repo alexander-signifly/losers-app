@@ -1,21 +1,51 @@
 <template>
-	<div class="home">
-		<div class="btn-container">
-			<router-link class="btn btn--primary" to="/play" v-text="`Play game`" />
-		</div>
+	<div class="home pad">
+		<router-link
+			class="btn btn--primary btn--block"
+			to="/play"
+			v-text="`Play game`"
+		/>
+		<tabs />
 	</div>
 </template>
 
 <script>
-export default {};
+import tabs from "@/components/tabs";
+
+export default {
+	components: {tabs},
+	data: () => ({
+		tabs: [
+			{
+				title: "Win ratio",
+				path: "/?",
+				items: [
+					{
+						image:
+							"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
+						rank: 1,
+						name: "Chiemeka Yobachukwu",
+						value: "00"
+					},
+					{
+						image:
+							"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
+						rank: 2,
+						name: "Marco Alves",
+						value: "00"
+					}
+				]
+			}
+		]
+	})
+};
 </script>
 
 <style lang="scss" scoped>
 .home {
 	padding-top: 32px;
-	.btn-container {
-		display: flex;
-		justify-content: center;
+	.btn {
+		margin-bottom: 48px;
 	}
 }
 </style>

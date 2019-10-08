@@ -13,4 +13,8 @@
 		background-color: $purple;
 		color: $white;
 	}
+
+	&--block {
+		display: flex;
+	}
 }
