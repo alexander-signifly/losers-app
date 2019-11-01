@@ -45,6 +45,9 @@ export default {
 	.filter {
 		display: flex;
 		margin-bottom: 40px;
+		white-space: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 	.title {
 		font-size: 14px;

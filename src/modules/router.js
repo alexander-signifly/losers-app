@@ -7,6 +7,7 @@ import seasons from "@/pages/seasons";
 import play from "@/pages/play";
 import badges from "@/pages/badges";
 import players from "@/pages/players";
+import player from "@/pages/player";
 
 export default new Router({
 	mode: "history",
@@ -16,6 +17,7 @@ export default new Router({
 		{path: "/seasons", name: "Seasons", component: seasons},
 		{path: "/play", name: "play", component: play},
 		{path: "/badges", name: "badges", component: badges},
-		{path: "/players", name: "players", component: players}
+		{path: "/players", name: "players", component: players},
+		{path: "/player/:slug", name: "player", component: player}
 	]
 });

@@ -29,6 +29,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 16px;
 	}
 	.title {
 		font-size: 18px;

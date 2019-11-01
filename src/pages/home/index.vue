@@ -47,16 +47,16 @@ export default {
 					items: [
 						{
 							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
+								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
 							rank: 1,
-							name: "Chiemeka Yobachukwu",
+							name: "Marco Alves",
 							value: "00"
 						},
 						{
 							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
+								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
 							rank: 2,
-							name: "Marco Alves",
+							name: "Chiemeka Yobachukwu",
 							value: "00"
 						}
 					]
