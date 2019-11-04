@@ -4,11 +4,17 @@
 			<a @click.prevent="back">Back</a>
 			<div class="title" v-text="titles[state]" />
 		</div>
+		<div class="players">
+			<Player v-for="item in players" :key="item.id" v-bind="item" />
+		</div>
 	</div>
 </template>
 
 <script>
+import Player from "./components/player";
+
 export default {
+	components: {Player},
 	data: () => ({
 		state: 0,
 		players: [
@@ -53,7 +59,7 @@ export default {
 	}),
 	methods: {
 		back() {
-			console.log("back");
+			this.$router.go(-1);
 		}
 	}
 };
@@ -68,17 +74,26 @@ export default {
 	width: 100%;
 	height: 100vh;
 	background-color: $black;
+	padding: 0 16px;
 	.top {
 		display: flex;
 		align-items: center;
-		padding: 12px 16px;
+		padding: 12px 0;
 		position: relative;
-		height: 32px;
+		height: 56px;
 	}
 	.title {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.players {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 32px;
 	}
 }
 </style>

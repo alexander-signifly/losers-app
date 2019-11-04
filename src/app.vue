@@ -1,17 +1,17 @@
 <template>
 	<div class="app">
-		<v-header />
+		<Header />
 		<router-view />
-		<v-nav />
+		<Nav />
 	</div>
 </template>
 
 <script>
-import vHeader from "@/components/header";
-import vNav from "@/components/nav";
+import Header from "@/components/header";
+import Nav from "@/components/nav";
 
 export default {
-	components: {vHeader, vNav}
+	components: {Header, Nav}
 };
 </script>
 

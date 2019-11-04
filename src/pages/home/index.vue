@@ -5,15 +5,15 @@
 			to="/play"
 			v-text="`Play game`"
 		/>
-		<tabs v-bind="{items}" />
+		<Tabs v-bind="{items}" />
 	</div>
 </template>
 
 <script>
-import tabs from "@/components/tabs";
+import Tabs from "@/components/tabs";
 
 export default {
-	components: {tabs},
+	components: {Tabs},
 	data: () => ({
 		items: [
 			{

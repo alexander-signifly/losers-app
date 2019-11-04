@@ -32,7 +32,7 @@ export default {
 	align-items: center;
 	padding: 12px 16px;
 	position: relative;
-	height: 32px;
+	height: 56px;
 	.left {
 		width: 32px;
 	}
