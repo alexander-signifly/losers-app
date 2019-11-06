@@ -5,13 +5,24 @@
 			<div class="title" v-text="titles[state]" />
 		</div>
 		<div class="players">
-			<Player v-for="item in players" :key="item.id" v-bind="item" />
+			<Player
+				v-for="item in players"
+				:key="item.id"
+				v-bind="item"
+				@select="select"
+			/>
 		</div>
+		<a
+			class="btn btn--block"
+			:class="btnClass"
+			@click="selectPlayers"
+			v-text="titles[state]"
+		/>
 	</div>
 </template>
 
 <script>
-import Player from "./components/player";
+import Player from "@/components/player";
 
 export default {
 	components: {Player},
@@ -49,18 +60,31 @@ export default {
 					"https://marvel-live.freetls.fastly.net/canvas/2018/10/0d17fc6da0ba4d92b3fbe07e01265b98?quality=95&fake=.png"
 			}
 		],
-		selectedPlayers: [],
+		teams: {
+			blue: [],
+			red: []
+		},
 		titles: [
-			"Select red players",
+			"Select blue players",
 			"Select blue players",
 			"Game on",
 			"Game ended"
 		]
 	}),
+	computed: {
+		btnClass() {
+			return this.state ? "btn--red" : "btn--blue";
+		}
+	},
 	methods: {
 		back() {
 			this.$router.go(-1);
-		}
+		},
+		select(id) {
+			const player = this.players.find((x) => x.id == id);
+			console.log(player);
+		},
+		selectPlayers() {}
 	}
 };
 </script>

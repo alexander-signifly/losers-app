@@ -1,123 +1,123 @@
 <template>
-	<div class="home pad">
-		<router-link
-			class="btn btn--primary btn--block"
-			to="/play"
-			v-text="`Play game`"
+	<div class="play">
+		<div class="top">
+			<a @click.prevent="back">Back</a>
+			<div class="title" v-text="titles[state]" />
+		</div>
+		<div class="players">
+			<Player
+				v-for="item in players"
+				:key="item.id"
+				v-bind="item"
+				@select="select"
+			/>
+		</div>
+		<a
+			class="btn btn--block"
+			:class="btnClass"
+			@click="selectPlayers"
+			v-text="titles[state]"
 		/>
-		<Tabs v-bind="{items}" />
 	</div>
 </template>
 
 <script>
-import Tabs from "@/components/tabs";
+import Player from "@/components/player";
 
 export default {
-	components: {Tabs},
+	components: {Player},
 	data: () => ({
-		items: [
+		state: 0,
+		players: [
 			{
-				component: "v-list",
-				data: {
-					title: "Win ratio",
-					path: "/?",
-					items: [
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
-							rank: 1,
-							name: "Chiemeka Yobachukwu",
-							value: "00"
-						},
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
-							rank: 2,
-							name: "Marco Alves",
-							value: "00"
-						}
-					]
-				}
+				id: 1,
+				name: "Yeray",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/60e3e9075ea445928840a8e163885263?quality=95&fake=.png"
 			},
 			{
-				component: "v-list",
-				data: {
-					title: "Goals (A)",
-					path: "/?",
-					items: [
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
-							rank: 1,
-							name: "Marco Alves",
-							value: "00"
-						},
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
-							rank: 2,
-							name: "Chiemeka Yobachukwu",
-							value: "00"
-						}
-					]
-				}
+				id: 2,
+				name: "Hu My",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/a56daf1f52df480588a77b17905bf497?quality=95&fake=.png"
 			},
 			{
-				component: "v-list",
-				data: {
-					title: "Goals (D)",
-					path: "/?",
-					items: [
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
-							rank: 1,
-							name: "Chiemeka Yobachukwu",
-							value: "00"
-						},
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
-							rank: 2,
-							name: "Marco Alves",
-							value: "00"
-						}
-					]
-				}
+				id: 3,
+				name: "Drake",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
 			},
 			{
-				component: "v-list",
-				data: {
-					title: "Losses",
-					path: "/?",
-					items: [
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/09fac96884594c6fa0992c8ab48503f2?quality=95&fake=.png",
-							rank: 1,
-							name: "Chiemeka Yobachukwu",
-							value: "00"
-						},
-						{
-							image:
-								"https://marvel-live.freetls.fastly.net/canvas/2018/10/28b22e413b254f4c8c613e3b9e81e064?quality=95&fake=.png",
-							rank: 2,
-							name: "Marco Alves",
-							value: "00"
-						}
-					]
-				}
+				id: 4,
+				name: "Cha",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/f7f96c759e4443efb69e3d209d7b6ece?quality=95&fake=.png"
+			},
+			{
+				id: 5,
+				name: "Naraya",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2018/10/0d17fc6da0ba4d92b3fbe07e01265b98?quality=95&fake=.png"
 			}
+		],
+		teams: {
+			blue: [],
+			red: []
+		},
+		titles: [
+			"Select blue players",
+			"Select blue players",
+			"Game on",
+			"Game ended"
 		]
-	})
+	}),
+	computed: {
+		btnClass() {
+			return this.state ? "btn--red" : "btn--blue";
+		}
+	},
+	methods: {
+		back() {
+			this.$router.go(-1);
+		},
+		select(id) {
+			const player = this.players.find((x) => x.id == id);
+			console.log(player);
+		},
+		selectPlayers() {}
+	}
 };
 </script>
 
 <style lang="scss" scoped>
-.home {
-	padding-top: 32px;
-	.btn {
-		margin-bottom: 48px;
+.play {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $black;
+	padding: 0 16px;
+	.top {
+		display: flex;
+		align-items: center;
+		padding: 12px 0;
+		position: relative;
+		height: 56px;
+	}
+	.title {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.players {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 32px;
 	}
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-	<div class="seasons">
-		SEASONS
+	<div class="play">
+		MATCH
 	</div>
 </template>
 

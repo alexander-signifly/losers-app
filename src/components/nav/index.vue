@@ -24,7 +24,7 @@ export default {
 			},
 			{
 				icon: require("@/assets/icons/play.svg"),
-				path: "/play"
+				path: "/play/home"
 			},
 			{
 				icon: require("@/assets/icons/badges.svg"),

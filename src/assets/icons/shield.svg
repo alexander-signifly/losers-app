@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icons/Shield</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icons" transform="translate(-124.000000, -209.000000)" stroke="#FFFFFF">
+            <g id="Icon/Shield" transform="translate(120.000000, 206.000000)">
+                <path d="M11.5162,19.842 C11.7712,19.915 12.0532,19.915 12.3082,19.842 C18.9022,17.934 18.8802,8.757 18.8142,6.991 C18.8072,6.813 18.6982,6.655 18.5322,6.588 L12.0932,4.049 C11.9242,3.983 11.7372,3.984 11.5692,4.052 L5.2932,6.588 C5.1282,6.655 5.0192,6.813 5.0122,6.991 C4.9462,8.757 4.9242,17.933 11.5162,19.842 Z" id="shield1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
