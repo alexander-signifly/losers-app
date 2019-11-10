@@ -1,30 +1,45 @@
 <template>
-	<a class="player red" @click="toggle">
+	<a class="player" @click="toggle">
 		<div class="image-wrap">
-			<div class="image" :style="{backgroundImage: `url(${image})`}" />
+			<div class="image" :style="{backgroundImage: `url(${item.image})`}" />
 			<template v-if="active">
 				<div class="circle" />
-				<div class="icon"></div>
+				<div class="icon" v-html="playerIcon" />
 			</template>
 		</div>
-		<div class="name" v-text="name" />
+		<div class="name" v-text="item.name" />
 	</a>
 </template>
 
 <script>
 export default {
 	props: {
-		id: {type: Number, required: true},
-		image: {type: String, required: true},
-		name: {type: String, required: true}
+		item: {type: Object, required: true},
+		selectedPlayers: {type: Array, required: true}
 	},
-	data: () => ({
-		active: false
-	}),
+	computed: {
+		active() {
+			return this.selectedPlayers.includes(this.item);
+		},
+		playerIcon() {
+			return this.selectedPlayers.findIndex(({id}) => id === this.item.id)
+				? require("@/assets/icons/play.svg")
+				: require("@/assets/icons/shield.svg");
+		}
+	},
 	methods: {
 		toggle() {
-			this.$emit("select", this.id);
-			this.active = !this.active;
+			if (this.selectedPlayers.includes(this.item)) {
+				const players = this.selectedPlayers.filter((x) => x !== this.item);
+				this.$emit("update:selectedPlayers", players);
+			} else {
+				if (this.selectedPlayers.length < 2) {
+					this.$emit("update:selectedPlayers", [
+						...this.selectedPlayers,
+						this.item
+					]);
+				}
+			}
 		}
 	}
 };
@@ -52,10 +67,6 @@ export default {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	border: 4px solid $purple;
-	.red & {
-		border-color: $red;
-	}
 }
 .icon {
 	position: absolute;
@@ -63,11 +74,10 @@ export default {
 	right: -2px;
 	width: 32px;
 	height: 32px;
-	background-color: $purple;
 	border-radius: 50%;
-	.red & {
-		background-color: $red;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .name {
 	color: #60637a;

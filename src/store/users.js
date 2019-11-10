@@ -1,10 +1,47 @@
-import axios from "@/modules/axios";
+// import axios from "@/modules/axios";
 
 export default {
 	namespaced: true,
 
 	state: {
-		data: null,
+		data: [
+			{
+				id: 1,
+				name: "Yeray",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/60e3e9075ea445928840a8e163885263?quality=95&fake=.png"
+			},
+			{
+				id: 2,
+				name: "Hu My",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/a56daf1f52df480588a77b17905bf497?quality=95&fake=.png"
+			},
+			{
+				id: 3,
+				name: "Drake",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
+			},
+			{
+				id: 4,
+				name: "Cha",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2019/7/f7f96c759e4443efb69e3d209d7b6ece?quality=95&fake=.png"
+			},
+			{
+				id: 5,
+				name: "Naraya",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2018/10/0d17fc6da0ba4d92b3fbe07e01265b98?quality=95&fake=.png"
+			},
+			{
+				id: 10,
+				name: "Alexander",
+				image:
+					"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
+			}
+		],
 		home: [],
 		away: []
 	},
@@ -14,36 +51,20 @@ export default {
 			state.data = data;
 		},
 
-		homeAdd(state, user) {
-			state.home.push(user);
+		homeAdd(state, users) {
+			state.home = users;
 		},
 
 		homeClear(state) {
 			state.home = [];
 		},
 
-		homeRemove(state, user) {
-			let index = state.home.findIndex((u) => u.id === user.id);
-
-			if (index === -1) return;
-
-			state.home.splice(index, 1);
-		},
-
-		awayAdd(state, user) {
-			state.away.push(user);
+		awayAdd(state, users) {
+			state.away = users;
 		},
 
 		awayClear(state) {
 			state.away = [];
-		},
-
-		awayRemove(state, user) {
-			let index = state.away.findIndex((u) => u.id === user.id);
-
-			if (index === -1) return;
-
-			state.away.splice(index, 1);
 		}
 	},
 

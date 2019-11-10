@@ -1,10 +1,15 @@
-import axios from "@/modules/axios";
+// import axios from "@/modules/axios";
 
 export default {
 	namespaced: true,
 
 	state: {
-		data: null,
+		data: {
+			id: 10,
+			name: "Alexander",
+			image:
+				"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
+		},
 		auth: JSON.parse(localStorage.getItem("auth"))
 	},
 
