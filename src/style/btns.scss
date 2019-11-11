@@ -19,7 +19,13 @@
 		color: $white;
 	}
 
+	&--white {
+		background-color: $white;
+		color: $purple;
+	}
+
 	&--block {
 		display: flex;
+		width: 100%;
 	}
 }
