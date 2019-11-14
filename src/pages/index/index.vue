@@ -2,7 +2,7 @@
 	<div class="home pad">
 		<router-link
 			class="btn btn--primary btn--block"
-			to="/play/away"
+			to="/play/home"
 			v-text="`Play game`"
 		/>
 		<Tabs v-bind="{items}" />

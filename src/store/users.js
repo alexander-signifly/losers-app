@@ -8,36 +8,42 @@ export default {
 			{
 				id: 1,
 				name: "Yeray",
+				slug: "yeray",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2019/7/60e3e9075ea445928840a8e163885263?quality=95&fake=.png"
 			},
 			{
 				id: 2,
 				name: "Hu My",
+				slug: "hu-my",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2019/7/a56daf1f52df480588a77b17905bf497?quality=95&fake=.png"
 			},
 			{
 				id: 3,
 				name: "Drake",
+				slug: "drake",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
 			},
 			{
 				id: 4,
 				name: "Cha",
+				slug: "cha",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2019/7/f7f96c759e4443efb69e3d209d7b6ece?quality=95&fake=.png"
 			},
 			{
 				id: 5,
 				name: "Naraya",
+				slug: "naraya",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2018/10/0d17fc6da0ba4d92b3fbe07e01265b98?quality=95&fake=.png"
 			},
 			{
 				id: 10,
 				name: "Alexander",
+				slug: "alexander",
 				image:
 					"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
 			}

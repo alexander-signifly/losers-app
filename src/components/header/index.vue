@@ -48,6 +48,7 @@ export default {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		text-transform: capitalize;
 	}
 }
 </style>

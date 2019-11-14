@@ -1,6 +1,12 @@
 <template>
 	<div class="play">
-		GAME
+		<div class="top end">
+			<div class="title" v-text="`Game on`" />
+			<router-link to="/">Close</router-link>
+		</div>
+		<div class="match">
+			MATCH
+		</div>
 		<div class="highlight" v-if="showHighlight">
 			<div class="headline">Match highlight</div>
 			<div class="box">
@@ -50,6 +56,21 @@ export default {
 	height: 100vh;
 	background-color: $black;
 	padding: 0 16px;
+}
+.top {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 12px 0;
+	position: relative;
+	height: 56px;
+}
+.title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 16px;
+	font-weight: 700;
 }
 .highlight {
 	position: absolute;

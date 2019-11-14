@@ -16,7 +16,7 @@ export default new Router({
 	base: process.env.BASE_URL,
 	routes: [
 		{path: "/", name: "losers", component: index},
-		{path: "/seasons", name: "Seasons", component: seasons},
+		{path: "/seasons", name: "seasons", component: seasons},
 		{path: "/play/home", name: "home", component: home},
 		{path: "/play/away", name: "away", component: away},
 		{path: "/play/match", name: "match", component: match},
