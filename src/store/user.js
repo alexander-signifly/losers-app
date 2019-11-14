@@ -7,6 +7,7 @@ export default {
 		data: {
 			id: 10,
 			name: "Alexander",
+			slug: "alexander",
 			image:
 				"https://marvel-live.freetls.fastly.net/canvas/2018/9/ace11f81b47c4affbc423ebb78f0822f?quality=95&fake=.png"
 		},

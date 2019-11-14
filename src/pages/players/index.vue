@@ -28,17 +28,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.players {
+	padding: 0 16px;
+}
+.items {
+	margin-top: 32px;
+}
 .item {
 	display: flex;
 	align-items: center;
-	margin-bottom: 12px;
+	margin-bottom: 16px;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
 }
 .image {
 	background-size: 100%;
 	border-radius: 100%;
-	width: 50px;
-	height: 50px;
+	width: 32px;
+	height: 32px;
 	border-radius: 50%;
-	margin-right: 8px;
+	margin-right: 16px;
 }
 </style>

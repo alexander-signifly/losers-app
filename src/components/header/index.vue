@@ -1,18 +1,23 @@
 <template>
 	<div class="header">
 		<div class="left">
-			<router-link class="avatar" to="/player/alexander" />
+			<router-link
+				class="avatar"
+				:to="`/player/${user.slug}`"
+				v-if="!showSettings"
+			/>
 		</div>
 		<v-title>{{ name }}</v-title>
 		<router-link
 			to="/settings"
 			v-html="require('@/assets/icons/settings.svg')"
-			v-if="name === 'player'"
+			v-if="name === 'player' && showSettings"
 		/>
 	</div>
 </template>
 
 <script>
+import {mapGetters} from "vuex";
 import vTitle from "@/components/title";
 
 export default {
@@ -20,6 +25,12 @@ export default {
 	computed: {
 		name() {
 			return this.$route.name;
+		},
+		...mapGetters({
+			user: "user/data"
+		}),
+		showSettings() {
+			return this.$route.params.slug === this.user.slug;
 		}
 	}
 };
