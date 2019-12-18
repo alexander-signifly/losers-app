@@ -46,17 +46,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.player {
-	margin-bottom: 16px;
-}
 .image-wrap {
 	position: relative;
 }
 .image {
 	background-size: 100%;
 	border-radius: 100%;
-	width: 75px;
-	height: 75px;
+	width: 73px;
+	height: 73px;
 	border-radius: 50%;
 	margin-bottom: 12px;
 }

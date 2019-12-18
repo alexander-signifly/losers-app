@@ -1,16 +1,16 @@
 <template>
 	<div class="play">
 		<div class="top">
-			<a @click.prevent="back">Back</a>
+			<a
+				@click.prevent="back"
+				v-html="require('@/assets/icons/arrow-left.svg')"
+			/>
 			<div class="title" v-text="`Select blue players`" />
 		</div>
 		<div class="players">
-			<Player
-				v-for="item in players"
-				:key="item.id"
-				v-bind="{item}"
-				:selectedPlayers.sync="selectedPlayers"
-			/>
+			<div class="item" v-for="item in players" :key="item.id">
+				<Player v-bind="{item}" :selectedPlayers.sync="selectedPlayers" />
+			</div>
 		</div>
 		<transition name="action">
 			<div class="action" v-if="selectedPlayers.length === 2">
@@ -75,9 +75,12 @@ export default {
 	}
 	.players {
 		display: flex;
-		justify-content: space-between;
 		flex-wrap: wrap;
-		margin-top: 32px;
+		margin: 32px -8px 0;
+	}
+	.item {
+		padding: 0 8px;
+		margin-bottom: 16px;
 	}
 	::v-deep {
 		.circle {

@@ -2,7 +2,11 @@
 	<div class="play">
 		<div class="top end">
 			<div class="title" v-text="`Game on`" />
-			<router-link to="/">Close</router-link>
+			<router-link
+				class="close"
+				to="/"
+				v-html="require('@/assets/icons/close.svg')"
+			/>
 		</div>
 		<div class="match">
 			MATCH
@@ -122,5 +126,14 @@ export default {
 .cancel {
 	font-size: 14px;
 	cursor: pointer;
+}
+.close {
+	color: $white;
+	width: 16px;
+	height: 16px;
+	::v-deep svg {
+		width: 16px;
+		height: 16px;
+	}
 }
 </style>

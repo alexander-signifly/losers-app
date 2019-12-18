@@ -1,16 +1,16 @@
 <template>
 	<div class="play">
 		<div class="top">
-			<router-link to="/play/home">Back</router-link>
+			<router-link
+				to="/play/home"
+				v-html="require('@/assets/icons/arrow-left.svg')"
+			/>
 			<div class="title" v-text="`Select red players`" />
 		</div>
 		<div class="players">
-			<Player
-				v-for="item in players"
-				:key="item.id"
-				v-bind="{item}"
-				:selectedPlayers.sync="selectedPlayers"
-			/>
+			<div class="item" v-for="item in players" :key="item.id">
+				<Player v-bind="{item}" :selectedPlayers.sync="selectedPlayers" />
+			</div>
 		</div>
 		<transition name="action">
 			<div class="action" v-if="selectedPlayers.length === 2">
